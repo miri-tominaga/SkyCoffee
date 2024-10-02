@@ -4,10 +4,12 @@ body{
     font-family: Arial, Hiragino Kaku Gothic ProN;
     color: #333333;
     background-color: #F5F5F5;
+    font-size: 16px;
     /* overflow-x: hidden; */
 }
 
 a{
+    text-decoration: none;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -22,11 +24,20 @@ img{
     vertical-align: bottom;
 }
 
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+/* ヘッダー */
 .header .logo {
     text-align: center;
     margin:50px;
 }
 
+/* メイン画像 */
 .main-visual{
     text-align: center;
     margin-bottom:40px;
@@ -38,52 +49,110 @@ img{
     object-fit: cover;
 }
 
+/* メニュー */
 .menulist ul{
     display: flex;
     justify-content: center;
     /* align-items: center; */
     list-style-type: none;
     padding: 40px 0;
-    margin: 0;
 }
 
 .menulist li{
     margin: 0 40px;
 }
 
-/* .main-visual ul li:not{
-    margin-right: 80px;
-} */
-/* .menulist{
-    text-align: center;
+
+/* コンセプト */
+.concept{
+    padding: 50px 0;
 }
 
-.menulist li{
-    display: inline;
-    font-size: 18px;
-    margin:40px 80px */
-/* } */
-
-.container{
+.concept > .container{
     display: flex;
+    align-items: center;
 }
 
-.container .desc{
-    width: 50%;
-    margin: auto;
+.concept .img{
+    flex: 1;
+    margin-right:20px;
 }
 
-.container .comment{
+.concept .desc{
+    flex: 1;
+    margin-left: 40px;
+}
+
+.concept .comment{
     font-size: 16px;
     margin-bottom:20px
 }
 
-.container .title{
+.concept .text{
+    font-size: 16px;
+}
+
+/* スマホ */
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+
+    .img{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .comment{
+        margin-bottom: 15px;
+    }
+
+    .maintitle{
+        margin-bottom: 20px;
+    }
+
+    .text{
+        margin-bottom: 90px;
+    }
+}
+
+.maintitle{
     font-size: 32px;
     color: #24A8BF;
     margin-bottom: 30px;
 }
 
-.container .text{
-    font-size: 16px;
+/* ブログ */
+.blog .maintitle{
+    text-align: center
+}
+
+.subtitle{
+    color: #333333;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.blog .item .title{
+    font-size: 15px;
+    color: #333333;
+    font-weight: bold;
+    
+}
+
+.blog .list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+}
+
+.blog .list .item{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .blog .list {
+        grid-template-columns: 1fr; /* 1列に変更 */
+    }
 }
