@@ -2,8 +2,7 @@
 
 /* 全体 */
 body {
-    font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
-    sans-serif;
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,sans-serif;
     font-size: 16px;
     color: #333;
   }
@@ -37,7 +36,7 @@ body {
     padding: 50px 0;
   }
   
-  .header .logo {
+  .header .logo{
     width: 280px;
     margin:0 auto;
   }
@@ -51,12 +50,13 @@ body {
   }
 
   .menulist ul{
-    text-align: center;
+    display: flex;
+    justify-content:center ;
   }
 
   .menulist ul li{
-    display: inline;
-    letter-spacing: 1px;
-    padding:80px;
     font-size: 18px;
+    letter-spacing: 1px;
+    margin-right: 80px;
   }
+
