@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body{
-    font-family: Arial, Hiragino Kaku Gothic ProN;
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,sans-serif;
     color: #333;
     font-size: 16px;
     /* overflow-x: hidden; */
@@ -32,12 +32,20 @@ img{
 
 /* ヘッダー */
 .header{
-    margin:50px;
+    padding:50px 0;
+    text-align: center;
 }
 .header .logo {
-    text-align: center;
-    margin:0 auto;
     width: 280px;
+    margin: 0 auto;
+
+}
+
+@media (max-width:768px) { 
+    .header .logo img {
+        width: 160px;
+        margin: 0 auto;
+    }
 }
 
 /* メイン画像 */
@@ -47,22 +55,32 @@ img{
 
 .main-visual > img{
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
+
+
 /* メニュー */
+.menulist{
+    padding: 40px 0;
+}
+
 .menulist ul{
     display: flex;
     justify-content: center;
     /* align-items: center; */
     list-style-type: none;
-    padding: 40px 0;
 }
 
-.menulist li{
+.menulist ul li{
     letter-spacing: 1px;
-    margin: 0 25px;
+    /* margin-right:80px; */
+    font-size: 18px;
+}
+
+.menulist li:nth-child(2) { /* 2番目のli（blog）に対して */
+    margin:0 80px 0 80px;
 }
 
 
@@ -158,4 +176,10 @@ img{
     .blog .list {
         grid-template-columns: 1fr; /* 1列に変更 */
     }
+}
+
+/* ボタン */
+.btn{
+    display:block;
+    text-align: center;
 }
